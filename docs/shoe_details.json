@@ -1,0 +1,342 @@
+{
+    "project": {
+      "name": "SoleMate E-Commerce Platform",
+      "objective": "Design, develop, and deploy a fully functional e-commerce application for shoe retail",
+      "business_context": "Expand retail presence into online marketplace with robust platform supporting scalability, secure transactions, and seamless user experience",
+      "total_points": 100,
+      "methodology": "7 SDLC phases"
+    },
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Requirement Gathering & Analysis",
+        "points": 15,
+        "activities": [
+          "Conduct stakeholder interviews",
+          "Define business goals and target audience",
+          "Capture functional requirements",
+          "Capture non-functional requirements",
+          "Define acceptance criteria"
+        ],
+        "functional_requirements": [
+          "User registration & authentication",
+          "Product catalog with filtering and search",
+          "Product detail pages with reviews and ratings",
+          "Shopping cart and checkout",
+          "Payment gateway integration (Stripe/PayPal/UPI)",
+          "Order tracking & history",
+          "Customer profile management",
+          "Admin dashboard for product and order management",
+          "Inventory management & stock alerts",
+          "Promotional features (discount codes, offers)"
+        ],
+        "non_functional_requirements": {
+          "performance": "Load <2 seconds",
+          "scalability": "Handle 50,000 concurrent users",
+          "security": "PCI-DSS compliance, data encryption",
+          "compatibility": "Mobile, tablet, and desktop"
+        },
+        "deliverables": [
+          "SRS (Software Requirements Specification)",
+          "Use case diagrams & user stories",
+          "Requirements traceability matrix (RTM)"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Requirements Coverage",
+            "target": "100%",
+            "points": 5,
+            "description": "% of requirements documented in RTM"
+          },
+          {
+            "metric": "Clarity & Completeness",
+            "target": "≥ 90% clear",
+            "points": 5,
+            "description": "Clear, measurable, non-ambiguous requirements"
+          },
+          {
+            "metric": "Stakeholder Alignment",
+            "target": "≥ 95%",
+            "points": 5,
+            "description": "% of requirements approved by stakeholders"
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Planning & Estimation",
+        "points": 10,
+        "tech_stack": {
+          "frontend": "React.js, Next.js for SSR, TailwindCSS",
+          "backend": "Node.js with Express",
+          "database": "PostgreSQL for relational data, Redis for caching",
+          "payment": "Stripe API",
+          "cloud": "AWS (EC2, RDS, S3, CloudFront)"
+        },
+        "activities": [
+          "Select tech stack",
+          "Create project plan with milestones",
+          "Resource allocation",
+          "Risk analysis and mitigation plan",
+          "Budget estimation"
+        ],
+        "deliverables": [
+          "Project plan with Gantt chart",
+          "Resource allocation matrix",
+          "Risk register",
+          "Cost estimation report"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Project Plan Accuracy",
+            "target": "≤ 5% deviation",
+            "points": 4,
+            "description": "Milestones realistic and achievable"
+          },
+          {
+            "metric": "Resource Allocation",
+            "target": "≥ 90% alignment",
+            "points": 3,
+            "description": "Skills match project needs"
+          },
+          {
+            "metric": "Risk Management",
+            "target": "100% high risks covered",
+            "points": 3,
+            "description": "Risk register completeness"
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "System Design",
+        "points": 15,
+        "activities": [
+          "High-Level Architecture (MVC structure with API Gateway, Microservices)",
+          "Database Design (ER diagram for products, users, orders, payments, inventory)",
+          "API Design (REST APIs, Swagger documentation)",
+          "UI/UX Design (Wireframes, Interactive prototypes, WCAG 2.1 compliance)"
+        ],
+        "deliverables": [
+          "HLD & LLD documents",
+          "ER diagram",
+          "API documentation",
+          "UI wireframes and prototypes"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Architecture Completeness",
+            "target": "100%",
+            "points": 5,
+            "description": "HLD & LLD cover all modules"
+          },
+          {
+            "metric": "Database Design Quality",
+            "target": "Fully optimized",
+            "points": 5,
+            "description": "Normalization, indexing, relationships"
+          },
+          {
+            "metric": "UI/UX Quality",
+            "target": "WCAG compliant",
+            "points": 5,
+            "description": "Accessibility, responsiveness, usability"
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "name": "Development",
+        "points": 20,
+        "activities": [
+          "Setup development environment & version control",
+          "Implement features in sprints (Agile methodology)",
+          "Code reviews and merge approvals",
+          "Integrate APIs with frontend components",
+          "Unit testing for each module",
+          "Build responsive layouts"
+        ],
+        "deliverables": [
+          "Source code repository",
+          "API endpoints with documentation",
+          "Unit test reports"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Code Quality",
+            "target": "≥ 90% compliant",
+            "points": 5,
+            "description": "Readability, modularity, adherence to standards"
+          },
+          {
+            "metric": "Feature Implementation",
+            "target": "≥ 95%",
+            "points": 5,
+            "description": "% of planned features implemented"
+          },
+          {
+            "metric": "Integration Quality",
+            "target": "Zero major failures",
+            "points": 5,
+            "description": "API & module connectivity"
+          },
+          {
+            "metric": "Unit Test Coverage",
+            "target": "≥ 80%",
+            "points": 5,
+            "description": "% of code covered by unit tests"
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "name": "Testing",
+        "points": 15,
+        "activities": [
+          "Functional Testing (Verify features against SRS)",
+          "Integration Testing (Smooth interaction between modules)",
+          "Performance Testing (Load and stress tests)",
+          "Security Testing (SQL injection, XSS, CSRF checks)",
+          "UAT (User Acceptance Testing)"
+        ],
+        "deliverables": [
+          "Test plan & test cases",
+          "Bug/defect reports in Jira",
+          "UAT sign-off document"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Test Case Coverage",
+            "target": "100%",
+            "points": 5,
+            "description": "% of requirements tested"
+          },
+          {
+            "metric": "Defect Detection Efficiency",
+            "target": "≥ 90%",
+            "points": 5,
+            "description": "% of defects found pre-release"
+          },
+          {
+            "metric": "UAT Success Rate",
+            "target": "≥ 95%",
+            "points": 5,
+            "description": "% of UAT cases passed"
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "name": "Deployment",
+        "points": 10,
+        "activities": [
+          "Setup CI/CD pipelines with GitHub Actions/Jenkins",
+          "Deploy backend to AWS EC2, frontend to AWS Amplify/CloudFront",
+          "Configure domain, SSL, and CDN caching",
+          "Data migration from legacy system",
+          "Final production release"
+        ],
+        "deliverables": [
+          "Deployment checklist",
+          "Live application URL",
+          "Rollback plan"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Deployment Success",
+            "target": "100%",
+            "points": 4,
+            "description": "First-attempt success rate"
+          },
+          {
+            "metric": "Downtime",
+            "target": "≤ 30 min",
+            "points": 3,
+            "description": "Deployment downtime duration"
+          },
+          {
+            "metric": "Rollback Preparedness",
+            "target": "Yes",
+            "points": 3,
+            "description": "Tested rollback plan"
+          }
+        ]
+      },
+      {
+        "phase": 7,
+        "name": "Maintenance & Support",
+        "points": 10,
+        "activities": [
+          "Monitor application using AWS CloudWatch & New Relic",
+          "Apply security patches & framework updates",
+          "Fix post-release defects",
+          "Add new features based on customer feedback"
+        ],
+        "deliverables": [
+          "Maintenance logs",
+          "Performance reports",
+          "Feature enhancement backlog"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Issue Resolution Time",
+            "target": "≤ 4 hrs",
+            "points": 4,
+            "description": "Avg. time to fix critical bugs"
+          },
+          {
+            "metric": "Feature Enhancement Delivery",
+            "target": "≥ 90% on schedule",
+            "points": 3,
+            "description": "Timely delivery of updates"
+          },
+          {
+            "metric": "Performance Monitoring",
+            "target": "Weekly",
+            "points": 3,
+            "description": "Regular monitoring reports"
+          }
+        ]
+      },
+      {
+        "phase": 8,
+        "name": "Business Impact & User Experience",
+        "points": 5,
+        "deliverables": [
+          "Customer satisfaction survey results",
+          "Sales growth analysis"
+        ],
+        "scoring_metrics": [
+          {
+            "metric": "Customer Satisfaction",
+            "target": "≥ 8/10",
+            "points": 3,
+            "description": "Post-launch survey rating"
+          },
+          {
+            "metric": "Sales Growth",
+            "target": "≥ 25%",
+            "points": 2,
+            "description": "Increase in online sales in 3 months"
+          }
+        ]
+      }
+    ],
+    "evaluation_targets": {
+      "requirement_quality": "≥ 100% requirements covered in RTM",
+      "design_quality": "≤ 5% design changes after development start",
+      "development_quality": "≥ 80% code coverage (unit tests)",
+      "performance": "≤ 2s average page load time",
+      "security": "0 critical vulnerabilities detected post-launch",
+      "testing_efficiency": "≥ 90% defect detection ratio (pre vs. post-release)",
+      "deployment": "≤ 30 min downtime during deployment",
+      "user_experience": "≥ 8/10 customer satisfaction score",
+      "maintenance": "≤ 4 hrs mean time to resolve critical issues",
+      "business_impact": "≥ 25% increase in online sales in 3 months"
+    },
+    "submission_format": {
+      "file_name": "{Account}_MockProject.zip",
+      "focus": "Deliverables listed in each section",
+      "note": "Activities sections serve as reference material and process guidance"
+    }
+  }
